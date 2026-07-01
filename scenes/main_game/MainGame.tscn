@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b56tmwsv7giv0"]
+
+[ext_resource type="Script" uid="uid://c6cp2q0drx3fd" path="res://scenes/main_game/MainGame.gd" id="1_qty2d"]
+[ext_resource type="PackedScene" uid="uid://ce8bwp5jk0glv" path="res://prefabs/player/Player.tscn" id="2_ol3pe"]
+[ext_resource type="PackedScene" uid="uid://xr5gcbel8xrb" path="res://prefabs/window/chat/ChatOverlay.tscn" id="3_bf1bb"]
+
+[node name="MainGame" type="ColorRect" unique_id=149983199]
+script = ExtResource("1_qty2d")
+
+[node name="Player" parent="." unique_id=346357347 instance=ExtResource("2_ol3pe")]
+z_index = 100
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1620403666]
+
+[node name="MapContainer" type="Node2D" parent="." unique_id=1179964330]
+z_index = 1
+position = Vector2(32, 32)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=831752807]
+
+[node name="ChatOverlay" parent="CanvasLayer" unique_id=988993086 instance=ExtResource("3_bf1bb")]
+
+[connection signal="require_dialog_showing" from="Player" to="." method="on_Player_require_dialog_showing"]
+[connection signal="finished" from="CanvasLayer/ChatOverlay" to="." method="on_ChatOverlay_finished"]

@@ -1,0 +1,44 @@
+class_name MainGame
+extends BaseGameScene
+
+
+@onready var player__ref: Player = $Player
+
+@onready var map_container__ref: Node2D = $MapContainer
+
+@onready var camera__ref: Camera2D = $Player/Camera2D
+
+@onready var chat_overlay__ref: ChatOverlay = $CanvasLayer/ChatOverlay
+
+
+var map__ref: BaseMap:
+    get():
+        if not self.is_node_ready() or self.map_container__ref.get_child_count() < 1:
+            return null
+
+        return self.map_container__ref.get_child(0)
+
+var is_showing_dialog: bool = false
+
+
+func _ready() -> void: self.__onReady__()
+func _unhandled_input(event: InputEvent) -> void: self.__onUnhandledInput__(event)
+
+
+func on_Player_require_dialog_showing(dialog_container: DialogContainerResource):
+    if dialog_container is ChatResource:
+        self.chat_overlay__ref.current_chat = dialog_container
+        self.chat_overlay__ref.show()
+        self.is_showing_dialog = true
+
+func on_ChatOverlay_finished():
+    self.chat_overlay__ref.release_focus()
+    self.chat_overlay__ref.hide()
+    self.is_showing_dialog = false
+
+func __onReady__():
+    self.chat_overlay__ref.hide()
+
+func __onUnhandledInput__(event: InputEvent):
+    if event.is_action_pressed("ui_accept") and not self.is_showing_dialog:
+        self.player__ref.tryInteractWithFacingObject()
