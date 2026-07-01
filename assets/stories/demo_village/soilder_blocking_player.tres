@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://0jhj0v8jymne"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_bx8c0"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_2vaxt"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="2_85ekb"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="3_m4ibw"]
+
+[sub_resource type="Resource" id="Resource_xejtv"]
+script = ExtResource("3_m4ibw")
+text = "Soilder: You shall never pass
+the trail without a mission !"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_jjv7m"]
+script = ExtResource("3_m4ibw")
+text = "兵士: 用事がないなら
+通さんぞ !"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_hy61b"]
+script = ExtResource("3_m4ibw")
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_iasgw"]
+script = ExtResource("3_m4ibw")
+text = "兵士: 没用事的話
+是通先生 !"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_nfsvb"]
+script = ExtResource("2_85ekb")
+id = "0"
+tr__ja = SubResource("Resource_jjv7m")
+tr__zh = SubResource("Resource_iasgw")
+tr__en = SubResource("Resource_xejtv")
+tr__ja_original = SubResource("Resource_hy61b")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__soilder_blocking_player"
+script = ExtResource("2_2vaxt")
+id = "soilder_blocking_player"
+nodes = Array[ExtResource("1_bx8c0")]([SubResource("Resource_nfsvb")])
+first_node_id = "0"
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

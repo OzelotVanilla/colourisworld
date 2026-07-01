@@ -1,0 +1,172 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://dgn6hgjl5it8f"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_3mmew"]
+[ext_resource type="Script" uid="uid://0nmoigjqx5r2" path="res://scripts/dialog/chat/ChatChoiceOptionResource.gd" id="2_iasgw"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_te1p1"]
+[ext_resource type="Script" uid="uid://dkr45dn86pxi7" path="res://scripts/dialog/chat/ChatChoiceDialogVariantResource.gd" id="3_xejtv"]
+[ext_resource type="Script" uid="uid://dj7crf2j88w0s" path="res://scripts/dialog/chat/ChatChoiceDialogResource.gd" id="4_hy61b"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="5_o5bd8"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="6_xejtv"]
+
+[sub_resource type="Resource" id="Resource_0y873"]
+script = ExtResource("3_xejtv")
+text = "I need to consider more..."
+metadata/_custom_type_script = "uid://dkr45dn86pxi7"
+
+[sub_resource type="Resource" id="Resource_6a8et"]
+script = ExtResource("3_xejtv")
+text = "引き返す"
+metadata/_custom_type_script = "uid://dkr45dn86pxi7"
+
+[sub_resource type="Resource" id="Resource_ty1ga"]
+script = ExtResource("3_xejtv")
+text = "掉頭"
+metadata/_custom_type_script = "uid://dkr45dn86pxi7"
+
+[sub_resource type="Resource" id="Resource_abant"]
+script = ExtResource("2_iasgw")
+comment = "no"
+tr__ja = SubResource("Resource_6a8et")
+tr__zh = SubResource("Resource_ty1ga")
+tr__en = SubResource("Resource_0y873")
+metadata/_custom_type_script = "uid://0nmoigjqx5r2"
+
+[sub_resource type="Resource" id="Resource_w6n5s"]
+script = ExtResource("3_xejtv")
+next_node_id = "ok"
+text = "I'm the bearer of the Luna"
+metadata/_custom_type_script = "uid://dkr45dn86pxi7"
+
+[sub_resource type="Resource" id="Resource_221cq"]
+script = ExtResource("3_xejtv")
+next_node_id = "fail"
+text = "お願いする"
+effects = "fail"
+metadata/_custom_type_script = "uid://dkr45dn86pxi7"
+
+[sub_resource type="Resource" id="Resource_nl6ly"]
+script = ExtResource("3_xejtv")
+next_node_id = "hesitate"
+text = "我去拿月亮攪拌機"
+metadata/_custom_type_script = "uid://dkr45dn86pxi7"
+
+[sub_resource type="Resource" id="Resource_w34wv"]
+script = ExtResource("2_iasgw")
+comment = "ok"
+tr__ja = SubResource("Resource_221cq")
+tr__zh = SubResource("Resource_nl6ly")
+tr__en = SubResource("Resource_w6n5s")
+metadata/_custom_type_script = "uid://0nmoigjqx5r2"
+
+[sub_resource type="Resource" id="Resource_alu4p"]
+script = ExtResource("5_o5bd8")
+text = "Only those on a sacred errand
+may pass !"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_d0eaq"]
+script = ExtResource("5_o5bd8")
+text = "この先は危ない。
+用のない者は通せない。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_6qhsi"]
+script = ExtResource("5_o5bd8")
+text = "這個先頭很危險。
+没用的人不能通過。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_v40bi"]
+script = ExtResource("4_hy61b")
+choices = Array[ExtResource("2_iasgw")]([SubResource("Resource_abant"), SubResource("Resource_w34wv")])
+id = "ask"
+tr__ja = SubResource("Resource_d0eaq")
+tr__zh = SubResource("Resource_6qhsi")
+tr__en = SubResource("Resource_alu4p")
+metadata/_custom_type_script = "uid://dj7crf2j88w0s"
+
+[sub_resource type="Resource" id="Resource_o5bd8"]
+script = ExtResource("5_o5bd8")
+text = "Begging is not working
+here..."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_xejtv"]
+script = ExtResource("5_o5bd8")
+text = "ダメだ!
+引き返してください。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_hy61b"]
+script = ExtResource("5_o5bd8")
+text = "是不行!
+請調頭。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_iasgw"]
+script = ExtResource("6_xejtv")
+id = "fail"
+tr__ja = SubResource("Resource_xejtv")
+tr__zh = SubResource("Resource_hy61b")
+tr__en = SubResource("Resource_o5bd8")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[sub_resource type="Resource" id="Resource_m5xoq"]
+script = ExtResource("5_o5bd8")
+text = "Mixer ? What you are talking about…
+I will not let you pass."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_j81gd"]
+script = ExtResource("5_o5bd8")
+text = "ミキサー? なんだこれは…
+怪しい…帰ってください。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_g3vf5"]
+script = ExtResource("5_o5bd8")
+text = "攪拌機? 什麼這個是…
+奇怪…請回家。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_uc6b3"]
+script = ExtResource("6_xejtv")
+id = "hesitate"
+tr__ja = SubResource("Resource_j81gd")
+tr__zh = SubResource("Resource_g3vf5")
+tr__en = SubResource("Resource_m5xoq")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[sub_resource type="Resource" id="Resource_jo80u"]
+script = ExtResource("5_o5bd8")
+text = "You shall pass.
+May the luck be with you."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_0omnj"]
+script = ExtResource("5_o5bd8")
+text = "そうか…
+気をつけてください。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_8goji"]
+script = ExtResource("5_o5bd8")
+text = "是這樣。
+請注意。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_n5bij"]
+script = ExtResource("6_xejtv")
+id = "ok"
+tr__ja = SubResource("Resource_0omnj")
+tr__zh = SubResource("Resource_8goji")
+tr__en = SubResource("Resource_jo80u")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__soilder_asking_player"
+script = ExtResource("2_te1p1")
+id = "soilder_asking_player"
+nodes = Array[ExtResource("1_3mmew")]([SubResource("Resource_v40bi"), SubResource("Resource_iasgw"), SubResource("Resource_uc6b3"), SubResource("Resource_n5bij")])
+first_node_id = "ask"
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

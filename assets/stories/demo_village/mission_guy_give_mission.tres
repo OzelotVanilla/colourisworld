@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://itx6orgc0dq0"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_h38ii"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="2_v40bi"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_viatc"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="3_d0eaq"]
+
+[sub_resource type="Resource" id="Resource_alu4p"]
+script = ExtResource("3_d0eaq")
+text = "Listen to your duty…
+Bring back the luna relic
+from the forgotten heights."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_d0eaq"]
+script = ExtResource("3_d0eaq")
+text = "あの，お願いがある…
+高みに生き
+あの草を持ってきておくれ。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_6qhsi"]
+script = ExtResource("3_d0eaq")
+text = "有需求…
+在山上開花的
+晚上的月亮攪拌機帶來。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_v40bi"]
+script = ExtResource("2_v40bi")
+id = "0"
+tr__ja = SubResource("Resource_d0eaq")
+tr__zh = SubResource("Resource_6qhsi")
+tr__en = SubResource("Resource_alu4p")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__mission_guy_give_mission"
+script = ExtResource("2_viatc")
+id = "mission_guy_give_mission"
+nodes = Array[ExtResource("1_h38ii")]([SubResource("Resource_v40bi")])
+first_node_id = "0"
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

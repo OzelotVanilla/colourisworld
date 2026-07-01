@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c22h3g8p0snu4"]
+
+[ext_resource type="Script" uid="uid://ck6bcpyov6dow" path="res://map/demo_village/DemoMissionGuy.gd" id="1_3p7ey"]
+[ext_resource type="Texture2D" uid="uid://dw7actuh506f0" path="res://assets/image/character.png" id="2_qh637"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7lmp"]
+
+[node name="DemoMissionGuy" type="Node2D" unique_id=1265114649]
+script = ExtResource("1_3p7ey")
+metadata/_custom_type_script = "uid://b5s0wwjs6rw4h"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=808409861]
+texture = ExtResource("2_qh637")
+
+[node name="DetectArea" type="Area2D" parent="." unique_id=261011536]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=382069092]
+shape = SubResource("RectangleShape2D_g7lmp")
