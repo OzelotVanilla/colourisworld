@@ -36,8 +36,19 @@ func on_ChatOverlay_finished():
     self.chat_overlay__ref.hide()
     self.is_showing_dialog = false
 
+    # TEST: Temp solution for effect.
+    if self.chat_overlay__ref.current_chat.id == "mission_guy_give_mission":
+        self.player__ref.status_dict["has_mission"] = true
+
 func __onReady__():
     self.chat_overlay__ref.hide()
+    
+    # TEST
+    var map = (load("res://map/demo_village/DemoVillage.tscn") as PackedScene).instantiate()
+    self.map_container__ref.add_child(map)
+    self.player__ref.map__ref = map
+    self.player__ref.game__ref = self
+    self.player__ref.moveToCell(Vector2i(6, -8))
 
 func __onUnhandledInput__(event: InputEvent):
     if event.is_action_pressed("ui_accept") and not self.is_showing_dialog:
