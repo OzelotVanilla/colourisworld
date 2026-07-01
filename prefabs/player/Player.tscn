@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ce8bwp5jk0glv"]
+
+[ext_resource type="Script" uid="uid://cw56e0pujreqp" path="res://prefabs/player/Player.gd" id="1_dgc4i"]
+[ext_resource type="Texture2D" uid="uid://dw7actuh506f0" path="res://assets/image/character.png" id="2_qq40p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xm33v"]
+size = Vector2(64, 64)
+
+[node name="Player" type="Node2D" unique_id=346357347]
+script = ExtResource("1_dgc4i")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=835400744]
+texture = ExtResource("2_qq40p")
+
+[node name="PivotOfCheckingArea" type="Node2D" parent="." unique_id=657844675]
+
+[node name="CheckArea" type="Area2D" parent="PivotOfCheckingArea" unique_id=456949677]
+position = Vector2(0, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PivotOfCheckingArea/CheckArea" unique_id=546743491]
+shape = SubResource("RectangleShape2D_xm33v")
