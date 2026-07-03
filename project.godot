@@ -14,6 +14,10 @@ config/name="ColourIsWorld"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+language_manager="*uid://b42ufs8mbfguw"
+
 [debug]
 
 gdscript/warnings/unused_parameter=0
