@@ -1,0 +1,54 @@
+[gd_resource type="TileSet" format=3 uid="uid://cvaq4m1ko21ud"]
+
+[ext_resource type="Texture2D" uid="uid://cxc2g413mvx07" path="res://assets/image/tilesheet__basic_white.png" id="1_q4tdy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0k0t"]
+resource_name = "basic__transparent"
+texture = ExtResource("1_q4tdy")
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/next_alternative_id = 2
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+0:2/0/custom_data_0 = true
+1:2/0 = 0
+2:2/0 = 0
+2:2/0/custom_data_0 = true
+3:2/0 = 0
+4:2/0 = 0
+4:2/0/custom_data_0 = true
+0:3/0 = 0
+0:3/0/custom_data_0 = true
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+0:4/0/custom_data_0 = true
+1:4/0 = 0
+1:4/0/custom_data_0 = true
+2:4/0 = 0
+3:4/0 = 0
+3:4/0/custom_data_0 = true
+4:4/0 = 0
+4:4/0/custom_data_0 = true
+0:5/0 = 0
+0:5/0/custom_data_0 = true
+1:5/0 = 0
+1:5/0/custom_data_0 = true
+2:5/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+custom_data_layer_0/name = "walkable"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_v0k0t")
