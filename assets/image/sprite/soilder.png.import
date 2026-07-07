@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw7actuh506f0"
-path="res://.godot/imported/character.png-92bc0d2026ddac75da50ab7ad7c8b9ee.ctex"
+uid="uid://6iqnm67n5w5l"
+path="res://.godot/imported/soilder.png-35c165ea39f8cbbe2bba10b02f92de1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/image/character.png"
-dest_files=["res://.godot/imported/character.png-92bc0d2026ddac75da50ab7ad7c8b9ee.ctex"]
+source_file="res://assets/image/sprite/soilder.png"
+dest_files=["res://.godot/imported/soilder.png-35c165ea39f8cbbe2bba10b02f92de1b.ctex"]
 
 [params]
 

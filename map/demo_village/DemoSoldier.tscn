@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://r5g1ahnb7quf"]
 
 [ext_resource type="Script" uid="uid://bjl5v08o23ao4" path="res://map/demo_village/DemoSoldier.gd" id="1_xrsuw"]
-[ext_resource type="Texture2D" uid="uid://dw7actuh506f0" path="res://assets/image/character.png" id="2_g7lmp"]
+[ext_resource type="Texture2D" uid="uid://6iqnm67n5w5l" path="res://assets/image/sprite/soilder.png" id="2_g7lmp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7lmp"]
 
