@@ -42,13 +42,13 @@ func on_ChatOverlay_finished():
 
 func __onReady__():
     self.chat_overlay__ref.hide()
-    
+
     # TEST
     var map = (load("res://map/demo_village/DemoVillage.tscn") as PackedScene).instantiate()
     self.map_container__ref.add_child(map)
     self.player__ref.map__ref = map
     self.player__ref.game__ref = self
-    self.player__ref.moveToCell(Vector2i(6, -8))
+    self.player__ref.moveToCell(Vector2i(5, -8))
 
 func __onUnhandledInput__(event: InputEvent):
     if event.is_action_pressed("ui_accept") and not self.is_showing_dialog:

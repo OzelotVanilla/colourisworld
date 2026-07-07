@@ -21,7 +21,6 @@ var had_talked_to_mission_giver: bool = false
 
 func canWalkThroughAt(coord: Vector2i) -> bool:
     # TEST: The whole code in this function is just for testing.
-    coord += Vector2i(-1, -1) # TODO: for offset, not a good solution
     var soldier_01__coord: Vector2i = self.demo_soldier_01__ref.position / 64
     var soldier_02__coord: Vector2i = self.demo_soldier_02__ref.position / 64
     var mission_guy__coord: Vector2i = self.demo_mission_guy__ref.position / 64

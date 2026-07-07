@@ -14,7 +14,7 @@ z_index = 100
 
 [node name="MapContainer" type="Node2D" parent="." unique_id=1179964330]
 z_index = 1
-position = Vector2(32, 32)
+position = Vector2(-32, -32)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=831752807]
 
