@@ -38,6 +38,18 @@ naming/default_signal_callback_to_self_name="on_{signal_name}"
 naming/scene_name_casing=1
 naming/script_name_casing=1
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://build/": "yellow",
+"res://locale/": "blue",
+"res://map/": "teal",
+"res://prefabs/": "orange",
+"res://scenes/": "purple",
+"res://scripts/": "gray"
+}
+
 [input]
 
 ui_change_to_previous_language={
