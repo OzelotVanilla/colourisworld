@@ -5,6 +5,3 @@ extends Resource
 
 ## Text to show.
 @export_multiline var text: String
-
-## TODO.
-@export var effects: String
