@@ -7,7 +7,7 @@ extends Node
 ## Class name not set-ed in order to avoid naming conflicted.
 
 
-## Emit when the
+## Emit when the language changes to another language.
 signal language_changed()
 
 
