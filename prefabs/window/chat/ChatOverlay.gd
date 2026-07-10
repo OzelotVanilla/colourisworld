@@ -1,6 +1,10 @@
 class_name ChatOverlay
 extends Control
 ## UI overlay node to show chat and choices
+##
+## TODO: This class is currently also acted as the holder of dialog runner.
+##       Should move the logic about node switching and chat process to somewhere else
+##        in the future.
 
 
 ## When all text and choice finishes.
@@ -19,6 +23,11 @@ var current_chat: ChatResource:
 ## Current node that is showing now, from active [member current_chat].
 var current_node: ChatNodeDialogResource:
     set = setCurrentNode
+
+## Execute the side-effect of dialog.
+var dialog_runner := DialogRunner.new()
+
+var game__ref: MainGame
 
 
 func _ready() -> void: self.__onReady__()
@@ -52,6 +61,10 @@ func setCurrentNode(value: ChatNodeDialogResource) -> void:
         )
     self.chat_text_window__ref.grab_focus()
 
+    # # Run effect if exists.
+    if not value.effects.is_empty():
+        self.dialog_runner.executeEffect(value.effects, self.game__ref.map__ref.id)
+
 ## Change to the specified node (by its ID).
 func goToNode(node_id: String) -> void:
     var node_index := self.current_chat.nodes.find_custom(
@@ -61,7 +74,10 @@ func goToNode(node_id: String) -> void:
         printerr("Cannot find node in resource `", self.current_chat.resource_name, "`.")
     self.current_node = self.current_chat.nodes[node_index]
 
-## Apply the language option to the text and choice window.
+## Apply the language option to the text and choice window.[br][br]
+##
+## Called when [signal LanguageManager.language_changed],
+##  or before the dialog is going to be showed.
 func applyLanguageOption() -> void:
     self.chat_text_window__ref.applyLanguageOption()
     if self.current_node is ChatChoiceDialogResource:

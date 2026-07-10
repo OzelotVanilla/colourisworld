@@ -35,15 +35,16 @@ func on_ChatOverlay_finished():
     self.chat_overlay__ref.release_focus()
     self.chat_overlay__ref.hide()
     self.is_showing_dialog = false
-
-    # TEST: Temp solution for effect.
-    if self.chat_overlay__ref.current_chat.id == "mission_guy_give_mission":
-        self.player__ref.status_dict["has_mission"] = true
+    self.map__ref.update()
 
 func __onReady__():
     self.chat_overlay__ref.hide()
+    self.chat_overlay__ref.game__ref = self
 
     # TEST
+    if not save_manager.isLocalSaveFileExist():
+        save_manager.createSave()
+    save_manager.loadFromLocalFile()
     var map = (load("res://map/demo_village/DemoVillage.tscn") as PackedScene).instantiate()
     self.map_container__ref.add_child(map)
     self.player__ref.map__ref = map
