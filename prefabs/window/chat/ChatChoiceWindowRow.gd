@@ -47,10 +47,10 @@ func __onReady__():
     self.hideArrow()
 
 func showArrow():
-    self.right_arrow__ref.modulate.a = 1
+    self.right_arrow__ref.self_modulate.a = 1
 
 func hideArrow():
-    self.right_arrow__ref.modulate.a = 0
+    self.right_arrow__ref.self_modulate.a = 0
 
 func applyLanguageOption():
     match language_manager.current_language:
