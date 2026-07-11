@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bir180dpnqu2"
-path="res://.godot/imported/tilesheet__basic_transparent.png-73a017a1378fadcff102211363f8a867.ctex"
+uid="uid://6iqnm67n5w5l"
+path="res://.godot/imported/soilder.png-149787e9378401a105f471646356f2fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/image/tilesheet__basic_transparent.png"
-dest_files=["res://.godot/imported/tilesheet__basic_transparent.png-73a017a1378fadcff102211363f8a867.ctex"]
+source_file="res://assets/image/demo_202607/sprite/soilder.png"
+dest_files=["res://.godot/imported/soilder.png-149787e9378401a105f471646356f2fa.ctex"]
 
 [params]
 

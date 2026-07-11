@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxc2g413mvx07"
-path="res://.godot/imported/tilesheet__basic_white.png-ce20e8a2a8c21e0973aa7fdd13681d00.ctex"
+uid="uid://cye8343bu6h1j"
+path="res://.godot/imported/quest_checker.png-19910ff28b6851058d8224373b82b8fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/image/tilesheet__basic_white.png"
-dest_files=["res://.godot/imported/tilesheet__basic_white.png-ce20e8a2a8c21e0973aa7fdd13681d00.ctex"]
+source_file="res://assets/image/demo_202607/sprite/quest_checker.png"
+dest_files=["res://.godot/imported/quest_checker.png-19910ff28b6851058d8224373b82b8fb.ctex"]
 
 [params]
 

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://c6xoj7g2kdr6p"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_xfbmh"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="2_ewn42"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_o2xv4"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="3_palyp"]
+
+[sub_resource type="Resource" id="Resource_j0dc5"]
+script = ExtResource("3_palyp")
+text = "You shall pass."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_palyp"]
+script = ExtResource("3_palyp")
+text = "通ってよい。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_8wa61"]
+script = ExtResource("3_palyp")
+text = "通ってよい。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_s2pm0"]
+script = ExtResource("3_palyp")
+text = "你過關。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_ewn42"]
+script = ExtResource("2_ewn42")
+tr__ja = SubResource("Resource_palyp")
+tr__zh = SubResource("Resource_s2pm0")
+tr__en = SubResource("Resource_j0dc5")
+tr__ja_original = SubResource("Resource_8wa61")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__soilder_let_player_pass"
+script = ExtResource("2_o2xv4")
+id = "soilder_let_player_pass"
+nodes = Array[ExtResource("1_xfbmh")]([SubResource("Resource_ewn42")])
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

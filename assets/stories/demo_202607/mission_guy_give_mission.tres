@@ -29,6 +29,7 @@ metadata/_custom_type_script = "uid://bto5ump7gf0gh"
 [sub_resource type="Resource" id="Resource_v40bi"]
 script = ExtResource("2_v40bi")
 id = "0"
+effects = "set map player__has_mission 1;"
 tr__ja = SubResource("Resource_d0eaq")
 tr__zh = SubResource("Resource_6qhsi")
 tr__en = SubResource("Resource_alu4p")

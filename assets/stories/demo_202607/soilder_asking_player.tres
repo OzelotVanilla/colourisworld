@@ -41,7 +41,6 @@ metadata/_custom_type_script = "uid://dkr45dn86pxi7"
 script = ExtResource("3_xejtv")
 next_node_id = "fail"
 text = "お願いする"
-effects = "fail"
 metadata/_custom_type_script = "uid://dkr45dn86pxi7"
 
 [sub_resource type="Resource" id="Resource_nl6ly"]
@@ -158,6 +157,7 @@ metadata/_custom_type_script = "uid://bto5ump7gf0gh"
 [sub_resource type="Resource" id="Resource_n5bij"]
 script = ExtResource("6_xejtv")
 id = "ok"
+effects = "set map soldier__should_let_pass 1;"
 tr__ja = SubResource("Resource_0omnj")
 tr__zh = SubResource("Resource_8goji")
 tr__en = SubResource("Resource_jo80u")

@@ -18,6 +18,13 @@ extends BaseMap
 
 var had_talked_to_mission_giver: bool = false
 
+var demo_soldier_01_dodged_position: Vector2i
+
+var demo_soldier_02_dodged_position: Vector2i
+
+
+func _ready() -> void: self.__onReady__()
+
 
 func canWalkThroughAt(coord: Vector2i) -> bool:
     # TEST: The whole code in this function is just for testing.
@@ -41,3 +48,30 @@ func canWalkThroughAt(coord: Vector2i) -> bool:
 
 func tryGetDialogAt(coord: Vector2i) -> DialogResource:
     return null
+
+func __onReady__():
+    # Init map state.
+    save_manager.save.runtime__maps_state.setState(
+        self.id, "player__has_mission", false
+    )
+    save_manager.save.runtime__maps_state.setState(
+        self.id, "soldier__should_let_pass", false
+    )
+
+    self.demo_soldier_01_dodged_position = \
+        self.demo_soldier_01__ref.position \
+        + self.convertMapCoordToLocal(self.demo_soldier_01__ref.direction_to_dodge)
+    self.demo_soldier_02_dodged_position = \
+        self.demo_soldier_02__ref.position \
+        + self.convertMapCoordToLocal(self.demo_soldier_02__ref.direction_to_dodge)
+    self.demo_soldier_01__ref.map__ref = self
+    self.demo_soldier_02__ref.map__ref = self
+
+func update():
+    # TEST: Bad solution for converting to bool.
+    var soldier_should_let_player_pass: bool = int(save_manager.save.runtime__maps_state \
+        .getState(self.id, "soldier__should_let_pass"))
+
+    if soldier_should_let_player_pass:
+        self.demo_soldier_01__ref.position = self.demo_soldier_01_dodged_position
+        self.demo_soldier_02__ref.position = self.demo_soldier_02_dodged_position

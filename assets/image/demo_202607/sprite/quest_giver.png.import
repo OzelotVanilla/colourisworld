@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cye8343bu6h1j"
-path="res://.godot/imported/quest_checker.png-eae1bb1ed59d30e9daf5d0bd40294b72.ctex"
+uid="uid://c1y8kvg5707m8"
+path="res://.godot/imported/quest_giver.png-d481485e2bdedc7ae8e95b880cd4451c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/image/sprite/quest_checker.png"
-dest_files=["res://.godot/imported/quest_checker.png-eae1bb1ed59d30e9daf5d0bd40294b72.ctex"]
+source_file="res://assets/image/demo_202607/sprite/quest_giver.png"
+dest_files=["res://.godot/imported/quest_giver.png-d481485e2bdedc7ae8e95b880cd4451c.ctex"]
 
 [params]
 

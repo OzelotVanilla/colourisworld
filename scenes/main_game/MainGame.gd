@@ -45,7 +45,9 @@ func __onReady__():
     if not save_manager.isLocalSaveFileExist():
         save_manager.createSave()
     save_manager.loadFromLocalFile()
-    var map = (load("res://map/demo_village/DemoVillage.tscn") as PackedScene).instantiate()
+    var map = (
+        load("res://map/demo_202607/demo_village/DemoVillage.tscn") as PackedScene
+    ).instantiate()
     self.map_container__ref.add_child(map)
     self.player__ref.map__ref = map
     self.player__ref.game__ref = self

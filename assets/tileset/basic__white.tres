@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://cvaq4m1ko21ud"]
 
-[ext_resource type="Texture2D" uid="uid://cxc2g413mvx07" path="res://assets/image/tilesheet__basic_white.png" id="1_q4tdy"]
+[ext_resource type="Texture2D" uid="uid://cxc2g413mvx07" path="res://assets/image/demo_202607/tilesheet__basic_white.png" id="1_q4tdy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0k0t"]
 resource_name = "basic__transparent"
