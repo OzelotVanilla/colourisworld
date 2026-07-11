@@ -24,8 +24,6 @@ var facing_direction: Vector2i = Vector2i.UP:
 
 var game__ref: MainGame
 
-var map__ref: BaseMap
-
 var status_dict: Dictionary = {}
 
 
@@ -72,7 +70,7 @@ func getInputDirection() -> Vector2i:
 func tryStep(direction: Vector2i) -> void:
     var next_cell := self.currect_cell_position + direction
     self.is_move_cooling_down = true
-    if self.map__ref.canWalkThroughAt(next_cell):
+    if self.game__ref.map__ref.canWalkThroughAt(next_cell):
         self.moveToCell(next_cell)
     await get_tree().create_timer(0.3).timeout
     self.is_move_cooling_down = false
