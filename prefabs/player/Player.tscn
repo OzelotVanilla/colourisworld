@@ -6,7 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xm33v"]
 size = Vector2(64, 64)
 
-[node name="Player" type="Node2D" unique_id=346357347]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86dt2"]
+size = Vector2(60, 60)
+
+[node name="Player" type="Area2D" unique_id=465924767]
 script = ExtResource("1_dgc4i")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=835400744]
@@ -20,3 +23,6 @@ position = Vector2(0, -64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PivotOfCheckingArea/CheckArea" unique_id=546743491]
 shape = SubResource("RectangleShape2D_xm33v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=227500321]
+shape = SubResource("RectangleShape2D_86dt2")

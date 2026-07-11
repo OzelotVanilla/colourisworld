@@ -3,6 +3,10 @@ class_name BaseMap
 extends TileMapLayer
 
 
+@warning_ignore("unused_signal") # Will be used in child class.
+signal request_teleport(map: BaseMap, coord: Vector2i)
+
+
 ## The ID of the base map.[br][br]
 ##
 ## Used in [GameSave] when saving player's location ([member PlayerData.location__map_id]).

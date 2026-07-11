@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://tl537fbeaygf"]
+
+[ext_resource type="Script" uid="uid://kkq1ktwi3w6b" path="res://prefabs/tile/teleport_tile/TeleportTile.gd" id="1_kcwg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xm33v"]
+size = Vector2(64, 64)
+
+[node name="TeleportTile" type="Area2D" unique_id=672669380]
+script = ExtResource("1_kcwg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461812528]
+shape = SubResource("RectangleShape2D_xm33v")
+
+[connection signal="area_entered" from="." to="." method="on_area_entered"]
