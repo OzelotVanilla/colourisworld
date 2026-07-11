@@ -10,6 +10,7 @@ size = Vector2(64, 64)
 script = ExtResource("1_dgc4i")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=835400744]
+self_modulate = Color(0, 0, 0, 1)
 texture = ExtResource("2_qq40p")
 
 [node name="PivotOfCheckingArea" type="Node2D" parent="." unique_id=657844675]

@@ -10,6 +10,7 @@ script = ExtResource("1_xrsuw")
 metadata/_custom_type_script = "uid://b5s0wwjs6rw4h"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=808409861]
+self_modulate = Color(0, 0, 0, 1)
 texture = ExtResource("2_g7lmp")
 
 [node name="DetectArea" type="Area2D" parent="." unique_id=261011536]

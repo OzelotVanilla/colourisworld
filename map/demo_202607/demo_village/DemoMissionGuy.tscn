@@ -13,10 +13,12 @@ metadata/_custom_type_script = "uid://b5s0wwjs6rw4h"
 [node name="Sprite" type="Node2D" parent="." unique_id=2087435180]
 
 [node name="QuestGiver" type="Sprite2D" parent="Sprite" unique_id=808409861]
+self_modulate = Color(0, 0, 0, 1)
 texture = ExtResource("2_qh637")
 
 [node name="QuestChecker" type="Sprite2D" parent="Sprite" unique_id=1098925232]
 visible = false
+self_modulate = Color(0, 0, 0, 1)
 texture = ExtResource("3_lgwwu")
 
 [node name="DetectArea" type="Area2D" parent="." unique_id=261011536]
