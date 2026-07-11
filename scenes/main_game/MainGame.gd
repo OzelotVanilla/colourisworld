@@ -31,6 +31,8 @@ func changeToMap(map: BaseMap, coord: Vector2i = Vector2i.ZERO):
     self.map__ref = map
     self.player__ref.moveToCell.call_deferred(coord)
     
+    map.update.call_deferred()
+
 func on_Player_require_dialog_showing(dialog_container: DialogContainerResource):
     if dialog_container is ChatResource:
         self.chat_overlay__ref.current_chat = dialog_container

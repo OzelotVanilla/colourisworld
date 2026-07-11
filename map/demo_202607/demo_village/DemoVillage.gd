@@ -67,6 +67,7 @@ func __onReady__():
     self.demo_soldier_01__ref.map__ref = self
     self.demo_soldier_02__ref.map__ref = self
 
+## TEST
 func update():
     # TEST: Bad solution for converting to bool.
     var soldier_should_let_player_pass: bool = int(save_manager.save.runtime__maps_state \
@@ -75,3 +76,5 @@ func update():
     if soldier_should_let_player_pass:
         self.demo_soldier_01__ref.position = self.demo_soldier_01_dodged_position
         self.demo_soldier_02__ref.position = self.demo_soldier_02_dodged_position
+
+    self.demo_mission_guy__ref.refreshSprite()

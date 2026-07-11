@@ -21,3 +21,6 @@ func cannotWalkThroughAt(coord: Vector2i):
 
 func convertMapCoordToLocal(map_coord: Vector2i) -> Vector2:
     return map_coord * 64
+
+## Update map entities according to updated global/map/player status.
+@abstract func update() -> void
