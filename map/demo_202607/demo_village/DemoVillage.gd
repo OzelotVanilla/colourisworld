@@ -15,6 +15,8 @@ extends BaseMap
 
 @onready var demo_mission_guy__ref: InteractableObject = $People/DemoMissionGuy
 
+@onready var teleport_tiles_container__ref: Node2D = $TeleportTiles
+
 
 var had_talked_to_mission_giver: bool = false
 
@@ -66,6 +68,14 @@ func __onReady__():
         + self.convertMapCoordToLocal(self.demo_soldier_02__ref.direction_to_dodge)
     self.demo_soldier_01__ref.map__ref = self
     self.demo_soldier_02__ref.map__ref = self
+
+    for teletile in self.teleport_tiles_container__ref.get_children():
+        if teletile is TeleportTile:
+            teletile.player_entered.connect(
+                func():
+                    var map: BaseMap = load(teletile.target_map__scene_path).instantiate()
+                    self.request_teleport.emit(map, teletile.target_coord)
+            )
 
 ## TEST
 func update():
