@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://b6mec14fw2qui"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_6radk"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="2_iqdnh"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_jdyk3"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="3_iqdnh"]
+
+[sub_resource type="Resource" id="Resource_yhm0q"]
+script = ExtResource("3_iqdnh")
+text = "A fragment of moon ?
+Not what I want."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_lycok"]
+script = ExtResource("3_iqdnh")
+text = "月の破片のようだ。
+頼まれた探し物ではない。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_764n0"]
+script = ExtResource("3_iqdnh")
+text = "月亮的疑惑的樣子。
+不是被要求的尋找物品。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_iqdnh"]
+script = ExtResource("2_iqdnh")
+id = "0"
+tr__ja = SubResource("Resource_lycok")
+tr__zh = SubResource("Resource_764n0")
+tr__en = SubResource("Resource_yhm0q")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__found_luna_relic"
+script = ExtResource("2_jdyk3")
+id = "found_luna_relic"
+nodes = Array[ExtResource("1_6radk")]([SubResource("Resource_iqdnh")])
+first_node_id = "0"
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

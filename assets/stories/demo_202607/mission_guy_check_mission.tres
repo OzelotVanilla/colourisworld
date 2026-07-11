@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://ck6vk2j1f3qw8"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_ty444"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="2_7fjl1"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_fs5c1"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="3_7fjl1"]
+
+[sub_resource type="Resource" id="Resource_vr8i7"]
+script = ExtResource("3_7fjl1")
+text = "God bless you. With this, the ghost 
+will not come to her tonight."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_hmvkd"]
+script = ExtResource("3_7fjl1")
+text = "ありがとう...これさえあれば，
+今夜も無事でしょう..."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_a7hvr"]
+script = ExtResource("3_7fjl1")
+text = "謝謝...只要有這個，
+那個孩子今晚也可以忍者吧..."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_7fjl1"]
+script = ExtResource("2_7fjl1")
+id = "0"
+tr__ja = SubResource("Resource_hmvkd")
+tr__zh = SubResource("Resource_a7hvr")
+tr__en = SubResource("Resource_vr8i7")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__mission_guy_check_mission"
+script = ExtResource("2_fs5c1")
+id = "mission_guy_check_mission"
+nodes = Array[ExtResource("1_ty444")]([SubResource("Resource_7fjl1")])
+first_node_id = "0"
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

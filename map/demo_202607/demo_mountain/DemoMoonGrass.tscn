@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dx5e11w4ix2uo"]
+
+[ext_resource type="Script" uid="uid://dlhe18fj0qh0i" path="res://map/demo_202607/demo_mountain/DemoMoonGrass.gd" id="1_dmn6r"]
+[ext_resource type="Texture2D" uid="uid://jecxait7erqb" path="res://assets/image/demo_202607/sprite/moon_grass.png" id="2_yofq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mex8h"]
+
+[node name="DemoMoonGrass" type="Node2D" unique_id=1274716761]
+script = ExtResource("1_dmn6r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1625121748]
+self_modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_yofq8")
+
+[node name="DetectArea" type="Area2D" parent="." unique_id=951940780]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=990073596]
+shape = SubResource("RectangleShape2D_mex8h")

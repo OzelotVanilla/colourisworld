@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://ev1gmdjnfa5u"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_tn16k"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_bcagt"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="2_p2h12"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="3_l2hcc"]
+
+[sub_resource type="Resource" id="Resource_a0n5t"]
+script = ExtResource("3_l2hcc")
+text = "A corpus of a metalic monster
+who eats and blends everything."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_l2hcc"]
+script = ExtResource("3_l2hcc")
+text = "これは...ミキサー??
+ここにあるはずはないのに..."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_e0d41"]
+script = ExtResource("3_l2hcc")
+text = "這個是...攪拌機??
+不是月亮攪拌機，不對。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_p2h12"]
+script = ExtResource("2_p2h12")
+id = "0"
+tr__ja = SubResource("Resource_l2hcc")
+tr__zh = SubResource("Resource_e0d41")
+tr__en = SubResource("Resource_a0n5t")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__found_mixer"
+script = ExtResource("2_bcagt")
+id = "found_mixer"
+nodes = Array[ExtResource("1_tn16k")]([SubResource("Resource_p2h12")])
+first_node_id = "0"
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

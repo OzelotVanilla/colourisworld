@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="ChatResource" format=3 uid="uid://cj8uena6ici3d"]
+
+[ext_resource type="Script" uid="uid://cdlucgv6uy80r" path="res://scripts/dialog/chat/ChatNodeDialogResource.gd" id="1_sivit"]
+[ext_resource type="Script" uid="uid://cm04ogyoxmmen" path="res://scripts/dialog/chat/ChatTextDialogResource.gd" id="2_6dkim"]
+[ext_resource type="Script" uid="uid://ca48ydnjtdpg" path="res://scripts/dialog/chat/ChatResource.gd" id="2_x4fvh"]
+[ext_resource type="Script" uid="uid://bto5ump7gf0gh" path="res://scripts/dialog/DialogVariantResource.gd" id="3_j6gyq"]
+
+[sub_resource type="Resource" id="Resource_vde5x"]
+script = ExtResource("3_j6gyq")
+text = "That is just the sacred relic I
+need ! Let me bring it back."
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_j6gyq"]
+script = ExtResource("3_j6gyq")
+text = "頼まれた月見草だ。
+持ち帰って報告をしよう。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_telfs"]
+script = ExtResource("3_j6gyq")
+text = "是被要求的月亮攪拌機。
+撿回去報告。"
+metadata/_custom_type_script = "uid://bto5ump7gf0gh"
+
+[sub_resource type="Resource" id="Resource_6dkim"]
+script = ExtResource("2_6dkim")
+id = "0"
+effects = "set global found_moon_grass 1;"
+tr__ja = SubResource("Resource_j6gyq")
+tr__zh = SubResource("Resource_telfs")
+tr__en = SubResource("Resource_vde5x")
+metadata/_custom_type_script = "uid://cm04ogyoxmmen"
+
+[resource]
+resource_name = "chat_resource__found_moon_grass"
+script = ExtResource("2_x4fvh")
+id = "found_moon_grass"
+nodes = Array[ExtResource("1_sivit")]([SubResource("Resource_6dkim")])
+first_node_id = "0"
+metadata/_custom_type_script = "uid://ca48ydnjtdpg"

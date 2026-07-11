@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d00xjs83jq25g"]
+
+[ext_resource type="Script" uid="uid://bimjpuwehf4vd" path="res://map/demo_202607/demo_mountain/DemoRelic.gd" id="1_lycok"]
+[ext_resource type="Texture2D" uid="uid://f8vb378xv300" path="res://assets/image/demo_202607/sprite/relic.png" id="2_lycok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhm0q"]
+
+[node name="DemoRelic" type="Node2D" unique_id=2110351294]
+script = ExtResource("1_lycok")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=802491159]
+self_modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_lycok")
+
+[node name="DetectArea" type="Area2D" parent="." unique_id=519492825]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=361368417]
+shape = SubResource("RectangleShape2D_yhm0q")
