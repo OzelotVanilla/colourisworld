@@ -12,4 +12,4 @@ extends DialogResource
 ##  connected by [code];[/code].[br][br]
 ##
 ## See outer readme file for detailed specification.
-@export var effects: String
+@export_multiline var effects: String
