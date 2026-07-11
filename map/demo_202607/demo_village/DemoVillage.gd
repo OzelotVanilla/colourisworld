@@ -51,10 +51,10 @@ func tryGetDialogAt(coord: Vector2i) -> DialogResource:
 
 func __onReady__():
     # Init map state.
-    save_manager.save.runtime__maps_state.setState(
+    save_manager.save.runtime__maps_state.setStateIfNotExist(
         self.id, "player__has_mission", false
     )
-    save_manager.save.runtime__maps_state.setState(
+    save_manager.save.runtime__maps_state.setStateIfNotExist(
         self.id, "soldier__should_let_pass", false
     )
 

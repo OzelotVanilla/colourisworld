@@ -24,6 +24,14 @@ func setState(map_id: String, event_or_flag_name: String, state_value: Variant) 
     var map_state_dict: Dictionary = self._stored_state_by_map.get_or_add(map_id, {})
     map_state_dict.set(event_or_flag_name, state_value)
 
+## Set event state or flag in a specific map only if it does not exist.
+func setStateIfNotExist(
+    map_id: String, event_or_flag_name: String, state_value: Variant
+) -> void:
+    var map_state_dict: Dictionary = self._stored_state_by_map.get_or_add(map_id, {})
+    if not map_state_dict.has(event_or_flag_name):
+        map_state_dict.set(event_or_flag_name, state_value)
+
 ## Erase one state in a specific map.
 func eraseState(map_id: String, event_or_flag_name: String) -> void:
     var map_state_dict: Dictionary = self._stored_state_by_map.get(map_id)
